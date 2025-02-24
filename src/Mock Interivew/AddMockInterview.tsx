@@ -50,7 +50,7 @@ const AddMockInterview = () => {
     // }
 
     try {
-      const response = await axios.get(`mockInterview/generate`, {
+      const response = await axios.get(`/mockInterview/generate`, {
         params: {
           jobPosition: form.values.jobPosition,
           jobDescription: form.values.jobDescription,
