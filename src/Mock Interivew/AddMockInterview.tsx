@@ -55,6 +55,7 @@ const AddMockInterview = () => {
         },
       });
 
+      console.log("Hi avnv", process.env.REACT_APP_GEMINI_API_KEY)
       const data1 = response.data;
       if (!data1) throw new Error("No response from server.");
 
