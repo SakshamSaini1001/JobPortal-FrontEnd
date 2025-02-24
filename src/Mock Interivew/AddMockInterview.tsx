@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Loader } from "@mantine/core";
 import { saveMockInterview } from "../Services/MockInterviewService";
+import axiosInstance from "../Interceptor/AxiosInterceptor";
 import {
   errorNotification,
   successNotification,
@@ -50,7 +51,7 @@ const AddMockInterview = () => {
     // }
 
     try {
-      const response = await axios.get(`/mockInterview/generate`, {
+      const response = await axiosInstance.get(`/mockInterview/generate`, {
         params: {
           jobPosition: form.values.jobPosition,
           jobDescription: form.values.jobDescription,
