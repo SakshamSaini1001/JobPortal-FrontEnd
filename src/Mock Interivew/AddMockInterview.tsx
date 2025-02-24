@@ -42,6 +42,7 @@ const AddMockInterview = () => {
     setError("");
 
     try {
+      console.log(process.env.REACT_APP_GEMINI_API_KEY)
       const response = await axiosInstance.get(`/mockInterview/generate`, {
         params: {
           jobPosition: form.values.jobPosition,
