@@ -35,6 +35,7 @@ const ProfileMenu = () => {
   const [opened, setOpened] = useState(false);
   const handleLogout = () => {
     dispatch(removeUser());
+    window.location.reload();
   };
 
   return (
