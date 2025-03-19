@@ -40,16 +40,8 @@ const AddMockInterview = () => {
     e.preventDefault();
     setLoading(true);
     setError("");
-    // form.validate();
-    // if (!form.isValid()) return;
 
-    // const { jobPosition, jobDescription, yearsOfExperience } = form.values;
-    // if (!jobPosition || !jobDescription || !yearsOfExperience) {
-    //   setError("All fields are required.");
-    //   setLoading(false);
-    //   return;
-    // }
-
+    console.log("API Key:", process.env.REACT_APP_GEMINI_API_KEY);
     try {
       const response = await axiosInstance.get(`/mockInterview/generate`, {
         params: {
@@ -110,12 +102,6 @@ const AddMockInterview = () => {
           console.log(err);
           errorNotification("Failed", err.errorMessage);
         });
-      //    else {
-      //     console.log("error");
-      //   }
-      // } else {
-      //   setError("No questions generated. Try again.");
-      // }
     } catch (err) {
       setError("Failed to fetch questions. Please try again.");
     } finally {

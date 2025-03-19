@@ -117,7 +117,11 @@ const Header = () => {
       </div>
 
       {/* NavLinks */}
+<<<<<<< HEAD
       <NavLinks />
+=======
+      <NavLinks/>
+>>>>>>> ac267a4a7e5e0ed91a75395e9a7ca69a13b42cf2
 
       {/* Profile */}
       <div className="flex gap-3 items-center">
