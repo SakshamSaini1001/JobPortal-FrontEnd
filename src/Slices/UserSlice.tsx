@@ -12,7 +12,7 @@ const UserSlice = createSlice({
     },
     removeUser: (state) => {
       removeItem("user");
-      removeItem("token);
+      removeItem("token");
       state = null;
       return state;
     },
