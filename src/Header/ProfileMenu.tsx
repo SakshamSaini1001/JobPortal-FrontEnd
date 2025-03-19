@@ -35,13 +35,14 @@ const ProfileMenu = () => {
   const [opened, setOpened] = useState(false);
   const handleLogout = () => {
     dispatch(removeUser());
+    window.location.reload();
   };
 
   return (
     <Menu shadow="md" width={200} opened={opened} onChange={setOpened}>
       <Menu.Target>
         <div className="flex gap-2 items-center cursor-pointer">
-          <div>{user.name}</div>
+          <div className="xs-mx:hidden">{user.name}</div>
           <Avatar
             src={
               profile.picture
@@ -62,7 +63,7 @@ const ProfileMenu = () => {
             Profile
           </Menu.Item>
         </Link>
-        <Menu.Item
+        {/*<Menu.Item
           leftSection={
             <IconMessageCircle style={{ width: rem(14), height: rem(14) }} />
           }
@@ -102,7 +103,7 @@ const ProfileMenu = () => {
           }
         >
           Dark Mode
-        </Menu.Item>
+        </Menu.Item> */}
 
         <Menu.Divider />
         <Menu.Item

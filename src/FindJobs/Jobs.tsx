@@ -100,8 +100,10 @@ const Jobs = () => {
   }, [filter, jobList]);
   return (
     <div className=" px-5 py-5 ">
-      <div className="m-2 flex justify-between">
-        <div className="font-semibold text-2xl">Recommended Jobs</div>
+      <div className="m-2 flex justify-between flex-wrap">
+        <div className="font-semibold text-2xl xs-mx:text-xl">
+          Recommended Jobs
+        </div>
         <Sort sort="job" />
       </div>
       <div className="mt-10 flex flex-wrap gap-4 m-4 justify-between">

@@ -74,7 +74,7 @@ const JobCard = (props: any) => {
   };
 
   return (
-    <div className="bg-mine-shaft-900 p-5 w-80 justify-between rounded-xl flex flex-col gap-4 border border-bright-sun-400 hover:cursor-pointer hover:shadow-[0_0_5px_2px_black] my-3 transition duration-300  ease-in-out !shadow-bright-sun-300 ">
+    <div className="bg-mine-shaft-900 p-5 w-72 sm-mx:w-full justify-between rounded-xl flex flex-col gap-4 border border-bright-sun-400 hover:cursor-pointer hover:shadow-[0_0_5px_2px_black] my-3 transition duration-300  ease-in-out !shadow-bright-sun-300 ">
       <div className="flex justify-between">
         <div className="flex gap-2 items-center">
           <div className="p-2 bg-mine-shaft-800 rounded-md">

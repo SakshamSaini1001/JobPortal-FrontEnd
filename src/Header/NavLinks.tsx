@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 const NavLinks = () => {
   const user = useSelector((state: any) => state.user);
   const jwt = localStorage.getItem("token");
-  console.log("Hii", user);
   const links = [
     { name: "Home", url: "find-home" },
     { name: "Find Job", url: "find-jobs" },
@@ -21,7 +20,7 @@ const NavLinks = () => {
 
   const location = useLocation();
   return (
-    <div className="flex gap-5 h-full items-center text-mine-shaft-300">
+    <div className="flex bs-mx:!hidden gap-5 h-full items-center text-mine-shaft-300">
       {links.map((link, index) => (
         <div
           key={link.url}
