@@ -27,12 +27,20 @@ const Feedback = () => {
     setOpenedIndex((prev) => (prev === index ? null : index));
   };
 
+  const averageRating =
+  feedbackList.length > 0
+    ? (
+        feedbackList.reduce((sum, item) => sum + (item.rating || 0), 0) /
+        feedbackList.length
+      ).toFixed(1)
+    : "N/A";
+
   return (
     <div className="p-10">
       <h2 className="text-3xl font-bold text-green-500">Congratulations</h2>
       <h2 className="font-bold text-2xl">Here is your Interview Feedback</h2>
       <h2 className="text-bright-sun-yellow-300 text-lg my-3">
-        Your overall Rating is 7/10
+        Your overall Rating is {averageRating}/10
       </h2>
       <h2 className="text-sm text-gray-400">
         Find below interview question with correct answer, your answer and
