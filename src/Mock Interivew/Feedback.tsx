@@ -27,11 +27,13 @@ const Feedback = () => {
     setOpenedIndex((prev) => (prev === index ? null : index));
   };
 
-  const averageRating =
+const averageRating =
   feedbackList.length > 0
     ? (
-        feedbackList.reduce((sum, item) => sum + (item.rating || 0), 0) /
-        feedbackList.length
+        feedbackList.reduce(
+          (sum, item: any) => sum + (item.rating || 0),
+          0
+        ) / feedbackList.length
       ).toFixed(1)
     : "N/A";
 
