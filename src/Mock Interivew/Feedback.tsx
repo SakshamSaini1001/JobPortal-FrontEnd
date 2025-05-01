@@ -30,12 +30,13 @@ const Feedback = () => {
 const averageRating =
   feedbackList.length > 0
     ? (
-        feedbackList.reduce(
-          (sum, item: any) => sum + (item.rating || 0),
-          0
-        ) / feedbackList.length
+        feedbackList.reduce((sum, item: any) => {
+          const rating = parseFloat(item.rating) || 0;
+          return sum + rating;
+        }, 0) / feedbackList.length
       ).toFixed(1)
     : "N/A";
+
 
   return (
     <div className="p-10">
